@@ -1,0 +1,43 @@
+{
+  "name": "skylark-coder",
+  "title": "Skylark Code Editor",
+  "runtime": {
+    "waitseconds" : 600,
+    "skylarkjs": {
+      "version": "0.9.6"
+    },
+    "locale": "zh-cn",
+
+    "packages" : [
+    ],
+    "paths": {
+      "text"              : "scripts/brackets/thirdparty/text/text",
+      "i18n"              : "scripts/brackets/thirdparty/i18n/i18n",
+      "fileSystemImpl"   : "scripts/brackets/filesystem/impls/demo/DemoFileSystem"
+    },
+    "shim": {
+    }
+  },
+  "page": {
+    "routeViewer": "body"
+  },
+
+  "plugins":  {
+        "app": {
+            "hookers": "starting started",
+            "controller":
+            {
+                "type": "scripts/plugins/app/AppController"
+            }
+        }
+    },
+    "routes": {
+        "home":  {
+            "pathto": "/",
+            "controller":
+            {
+                "type": "scripts/routes/home/HomeController"
+            }
+        }
+    }
+}
